@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+      <!-- bootstrap -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+</head>
+<style>
+  .navbar-nav{
+    margin-left: 10%;
+  }
+  .nav-item:not(:last-child){
+    margin-right: 40px;
+  }
+  #top-box{
+  background-color: #FAFAFA;
+}
+#top-box>div{
+  padding: 80px 0;
+}
+#content-quote{
+  padding: 72px;
+}
+#quote-left{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#quote-right{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#content-quote-text>div{
+  font-size: 24px;
+}
+#content-quote-text>div:first-child{
+  margin-bottom: 16px;
+}
+#content-quote-text img{
+  position: absolute;
+  right: -15px;
+  bottom: -5px;
+}
+#content-2BC{
+  margin-top: 24px;
+}
+#content-2BC>div{
+  padding: 0 20px
+}
+.content-2BC-title{
+  color: #5B5B5B;
+  display: inline-block;
+}
+.content-2BC-title::after {
+  content: "";
+  display: block;
+  width: 50%;
+  border-bottom: 2px solid #C1C1C1;
+  margin: 4px auto;
+}
+.content-2BC-text{
+  color: #3B3B3B;
+}
+
+#content-box{
+  margin-top: 72px;
+}
+.img-box{
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 80px;
+}
+.img-box img{
+	border-radius: 8px;
+  border: solid 1px #F1F1F1;
+}
+.text-box{
+  padding: 0 16px;
+}
+.img-title-btn{
+  background-color: transparent;
+  border: none;
+}
+.img-title{
+  color: #3B3B3B;
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 16px;
+  line-height: 33.6px;
+}
+.img-text{
+  color: #919191;
+  margin-top: 8px;
+  line-height: 24px;
+}
+.img-label{
+  color: #3B3B3B;
+  background-color: #F1F1F1;
+  border-radius:16px;
+  padding: 4px 12px;
+  margin-top: 24px;
+  
+}
+.img-label{
+  margin-right: 10px;
+}
+
+.page{
+  width: 40px;
+  height: 40px;
+  padding: 2px 13px;
+  line-height: 36px;
+  text-align: center;
+  margin-bottom: 120px;
+}
+.page.active{
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  border-radius: 4px;
+}
+
+footer{
+  
+}
+#footer-box{
+  background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true");
+}
+.footer-box-in{
+  padding: 80px 0;
+}
+#footer-text-1{
+  font-size: 20px;
+  color: #3B3B3B;
+  margin: 24px 0;
+}
+#footer-text-2{
+  font-size: 20px;
+  color: #919191;
+}
+.footer-icon-btn.active{
+  background-color: #000000;
+  color: #FFFFFF;
+}
+.footer-icon-btn{
+  font-size: 20px;
+  font-weight: bold;
+  padding: 8px 24px;
+  border-radius: 8px;
+  width: 306px;
+}
+.footer-icon-btn:not(:first-child){
+  margin-top: 24px;
+  border: solid 1px #C1C1C1;
+}
+.footer-icon-btn>div{
+  align-self: center;
+  margin-left: 8px;
+}
+
+
+#modal-title{
+  font-size: 28px;
+  font-weight: bold;
+  color: #3B3B3B;
+  text-align: center;
+  margin-top: 40px;
+}
+#modal-title-b{
+  color: #919191;
+  text-align: center;
+  margin-bottom: 40px;
+}
+#modal-text-box{
+  margin: 0 56px;
+}
+.modal-text-1{
+  color: #1E1E1E;
+  max-width: 532px;
+  margin-right: 72px;
+}
+.modal-text-2>div:first-child{
+  margin-bottom: 8px;
+}
+.modal-text-2{
+  color: #5B5B5B;
+  padding-left: 24px;
+  border-left: solid 1px #C1C1C1;
+}
+#modal-img-box{
+  margin: 0 auto 80px;
+  width: 75%;
+}
+#modal-img-box>div:first-child{
+  margin: 56px 0;
+}
+#modal-img-box>div{
+  text-align: center;
+}
+#modal-img-box img{
+  border-radius: 20px;
+}
+.modal-img-title{
+  font-size: 24px;
+  font-weight: bold;
+  color: #1E1E1E;
+  margin: 24px 0 16px;
+}
+.modal-img-text{
+  color: #5B5B5B;
+}
+
+@media screen and (max-width:992px){
+  .navbar-nav{
+    margin-left: 0;
+  }
+  .nav-item:not(:last-child){
+    margin-right: 0px;
+  }
+  #content-2BC>div:first-child{
+    margin-bottom: 20px;
+  }
+  .footer-box{
+    background-image: url("https://github.com/hexschool/2022-web-layout-   training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true");
+  }
+  .footer-box-in{
+    padding: 40px 0;
+    width: 306px;
+    margin: 0 auto;
+  }
+  .footer-box-in>div:first-child{
+    margin-bottom: 40px;
+  }
+  #modal-content-box{
+    margin: 0 32px;
+  }
+  #modal-title{
+    margin-top: 24px;
+  }
+  #modal-title-b{
+    margin-bottom: 24px;
+  }
+  #modal-text-box{
+    margin: 0;
+  }
+  .modal-text-1{
+    margin-right: 0px;
+    margin-bottom: 24px;
+  }
+  .modal-text-2>div:first-child{
+    margin: 24px 0;
+  }
+  .modal-text-2{
+    text-align: center;
+    padding: 0;
+    border-top: solid 1px #C1C1C1;
+    border-left: none;
+  }
+  #modal-img-box{
+    margin: 0 auto 40px;
+    width: 100%;
+  }
+}
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">首頁</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">作品集</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">服務項目</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">部落格</a>
+          </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">聯絡我</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <div id="top-box" class="w-100">
+    <div>
+      <div class="text-center">
+        <div id="content-quote" class="d-inline-block position-relative">
+          <img id="quote-right" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-right.png?raw=true">
+          <img id="quote-left" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/quote-left.png?raw=true">
+          <div id="content-quote-text">
+            <div>
+              <div>讓使用者在觀賞與使用的旅程中，發現
+                <span class="position-relative text-nowrap">設計的價值<img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true"></span>
+              </div>
+              
+            </div>
+            <div class="position-relative">
+              <div>而我在設計與開發的過程中，看見
+                <span class="position-relative text-nowrap">自己的價值<img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/mark.png?raw=true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content-2BC" class="d-lg-flex justify-content-center text-center">
+        <div>
+          <div class="content-2BC-title">2B經驗</div>
+          <div class="content-2BC-text">內部監控系統、庫存系統、採購系統、行銷整合系統</div>
+        </div>
+        <div>
+          <div class="content-2BC-title">2B經驗</div>
+          <div class="content-2BC-text">內部監控系統、庫存系統、採購系統、行銷整合系統</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="content-box" class="container row row-cols-lg-2 mx-auto">
+    <!--content-->
+    <div>
+      
+      <div class="img-box">
+        <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image1.png?raw=true">
+        <div class="text-box">
+          <button class="img-title-btn" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="img-title">星際旅行訂票平台</div>
+          </button>
+          <div class="img-text">悠遊宇宙的夢想，從這裡開始實現</div>
+          <div class="d-flex flex-wrap">
+            <div class="img-label">網頁設計</div>
+            <div class="img-label">響應式設計</div>
+            <div class="img-label">Bootstrap</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div>
+      <div class="img-box">
+        <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image2.png?raw=true">
+        <div class="text-box">
+          <button class="img-title-btn" type="button" data-bs-toggle="modal" data-bs-target="#">
+            <div class="img-title">理財App</div>
+          </button>
+          <div class="img-text">連動帳戶與行動支付，讓 AI 提供您最好的理財建議</div>
+          <div class="d-flex flex-wrap">
+            <div class="img-label">APP設計</div>
+            <div class="img-label">iOS</div>
+            <div class="img-label">React</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div>
+      <div class="img-box">
+        <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image3.png?raw=true">
+        <div class="text-box">
+          <button class="img-title-btn" type="button" data-bs-toggle="modal" data-bs-target="#">
+            <div class="img-title">醫美診所官網</div>
+          </button>
+          <div class="img-text">永保青春的秘密，從粹究開始</div>
+          <div class="d-flex flex-wrap">
+            <div class="img-label">網頁設計</div>
+            <div class="img-label">響應式設計</div>
+            <div class="img-label">ＷordPress</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div>
+      <div class="img-box">
+        <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image4.png?raw=true">
+        <div class="text-box">
+          <button class="img-title-btn" type="button" data-bs-toggle="modal" data-bs-target="#">
+            <div class="img-title">美美美早餐店 POS 機 UI Design</div>
+          </button>
+          <div class="img-text">訂單送單一目瞭然，自動報表分析好輕鬆</div>
+          <div class="d-flex flex-wrap">
+            <div class="img-label">UI 設計</div>
+            <div class="img-label">前端開發</div>
+            <div class="img-label">Wix</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div>
+      <div class="img-box">
+        <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image5.png?raw=true">
+        <div class="text-box">
+          <button class="img-title-btn" type="button" data-bs-toggle="modal" data-bs-target="#">
+            <div class="img-title">電影院訂票系統</div>
+          </button>
+          <div class="img-text">三步驟完成訂票，電腦手機都支援</div>
+          <div class="d-flex flex-wrap">
+            <div class="img-label">前端開發</div>
+            <div class="img-label">後端支援</div>
+            <div class="img-label">Vue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--content-->
+    <div>
+      <div class="img-box">
+        <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/work-image6.png?raw=true">
+        <div class="text-box">
+          <button class="img-title-btn" type="button" data-bs-toggle="modal" data-bs-target="#">
+            <div class="img-title">巧克巧克形象官網設計</div>
+          </button>
+          <div class="img-text">三步驟完成訂票，電腦手機都支援</div>
+          <div class="d-flex flex-wrap">
+            <div class="img-label">UI設計</div>
+            <div class="img-label">設計系統</div>
+            <div class="img-label">網路電商</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -->
+  </div>
+  
+  <div class="d-flex justify-content-center">
+    <div class="page active">1</div>
+    <div class="page">2</div>
+    <div class="page">3</div>
+  </div>
+  
+  <footer>
+    <div id="footer-box">
+  <!--     <img class="d-none d-lg-block w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-lg.png?raw=true"> -->
+  <!--     <img class="d-lg-none w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/footer-bg-sm.png?raw=true"> -->
+      <div class="d-lg-flex justify-content-around footer-box-in">
+        <div class="align-self-center">
+          <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/logo.svg">
+          <div id="footer-text-1">
+            <div>若有數位產品設計和開發相關問題</div>
+            <div>歡迎填寫表單，或直接與我聯絡！</div>
+          </div>
+          <div id="footer-text-2">service@hexschool.com</div>
+        </div>
+        <div>
+          <div class="d-flex footer-icon-btn active">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/list.svg">
+            <div>填寫表單</div>
+          </div>
+          <div class="d-flex footer-icon-btn">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/instagram.svg">
+            <div>hexschool_demo</div>
+          </div>
+          <div class="d-flex footer-icon-btn">
+            <img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/2f8d8c7a6133b448ecff5bf0a3d282b87b7c6a7e/2024%20web-camp/facebook.svg">
+            <div>hexschoolTW</div>
+          </div>
+        </div>
+      </div>
+      <div>
+  </footer>
+    
+    
+    
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            <div id="modal-content-box">
+              <div id="modal-title">星際旅行訂票平台</div>
+              <div id="modal-title-b">悠遊宇宙的夢想，從這裡開始實現</div>
+              <div id="modal-text-box" class="d-lg-flex"> 
+                <div class="modal-text-1">STAR TRAVEL 為 KK 公司宇宙旅行的購票網站。<br/>主要從地球出發，目的地包含月球、火星、水星、木星；未來太空轉運站建置完畢，將再擴增目的地土星和金星。</div>
+                <div class="modal-text-2">
+                  <div class="d-lg-flex">
+                    <div>設計原則</div>
+                    <div class="d-none d-lg-block">：</div>
+                    <div>宇宙旅行、深色背景、強烈視覺效果</div>
+                  </div>
+                  <div class="d-lg-flex">
+                    <div>開發方式</div>
+                    <div class="d-none d-lg-block">：</div>
+                    <div>Bootstrap、Javascript、RWD</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="modal-img-box">
+              <div>
+                <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/modal-image1.png?raw=true">
+                <div class="modal-img-title">主視覺</div>
+                <div class="modal-img-text">可直接設定日期、起迄星球、張數，快速查詢可購買的票券。</div>
+              </div>
+              <div>
+                <img class="w-100" src="https://github.com/hexschool/2022-web-layout-training/blob/main/2024%20web-camp/modal-image2.png?raw=true">
+                <div class="modal-img-title">推薦查詢</div>
+                <div class="modal-img-text">給予最快起飛，以及最熱門的景點推薦，協助使用者進行選擇。</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+  
